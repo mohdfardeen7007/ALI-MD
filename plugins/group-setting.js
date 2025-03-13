@@ -292,9 +292,10 @@ cmd({
     desc: "To Tag all Members",
     category: "group",
     use: '.tagall',
+    groupAdmins: "false"
     filename: __filename
 },
-async (conn, mek, m, { from, participants, reply, isGroup, senderNumber, prefix, command }) => {
+async (conn, mek, m, { from, participants, reply, isGroup, senderNumber, groupAdminsfalse, prefix, command }) => {
     try {
         if (!isGroup) return reply("❌ This command can only be used in groups.");
         
