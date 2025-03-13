@@ -294,7 +294,7 @@ cmd({
     use: '.tagall',
     filename: __filename
 },
-async (conn, mek, m, { from, participants, reply, isGroup, senderNumber, prefix, command }) => {
+async (conn, mek, m, { from, participants, reply, isGroup, senderNumber, groupAdmins, prefix, command }) => {
     try {
         if (!isGroup) return reply("❌ This command can only be used in groups.");
         
@@ -320,7 +320,7 @@ async (conn, mek, m, { from, participants, reply, isGroup, senderNumber, prefix,
         let message = (m.body || "").slice((prefix + command).length).trim();
         if (!message) message = "ATTENTION EVERYONE!"; // Default message
 
-        let teks = `*▢ GROUP : ${groupName}*\n*▢ MEMBERS : ${totalMembers}*\n*▢ MESSAGE : ${message}*\n\n┌───❒ *MENTIONS*\n`;
+        let teks = `*▢ GROUP : ${groupName}*\n*▢ MEMBERS : ${totalMembers}*\n*😘 MESSAGE : ${message}*\n\n┌───❒ *MENTIONS*\n`;
 
         for (let mem of participants) {
             if (!mem.id) continue; // Prevent undefined errors
