@@ -15,7 +15,33 @@ let antilinkAction = "off"; // Default state
 let warnCount = {}; // Track warnings per user
 
 cmd({
+    pattern: "mode",
+    desc: "Set bot mode to private or public.",
+    category: "settings",
+    filename: __filename,
+}, async (conn, mek, m, { from, args, isOwner, reply }) => {
+    if (!isOwner) return reply("*📛 Only the owner can use this command!*");
+
+    // Si aucun argument n'est fourni, afficher le mode actuel et l'usage
+    if (!args[0]) {
+        return reply(`📌 Current mode: *${config.MODE}*\n\nUsage: .mode private OR .mode public`);
+    }
+
+    const modeArg = args[0].toLowerCase();
+
+    if (modeArg === "private") {
+        config.MODE = "private";
+        return reply("✅ Bot mode is now set to *PRIVATE*.");
+    } else if (modeArg === "public") {
+        config.MODE = "public";
+        return reply("✅ Bot mode is now set to *PUBLIC*.");
+    } else {
+        return reply("❌ Invalid mode. Please use `.mode private` or `.mode public`.");
+    }
+});
+cmd({
     pattern: "auto-typing",
+    alias: ["autotyping"],
     description: "Enable or disable auto-typing feature.",
     category: "settings",
     filename: __filename
@@ -110,7 +136,7 @@ async (conn, mek, m, { from, args, isOwner, reply }) => {
 //--------------------------------------------
 cmd({
     pattern: "status-react",
-    alias: ["statusreaction"],
+    alias: ["statusreact"],
     desc: "Enable or disable auto-liking of statuses",
     category: "settings",
     filename: __filename
@@ -132,7 +158,7 @@ async (conn, mek, m, { from, args, isOwner, reply }) => {
 });
 cmd({
     pattern: "anti-call",
-    alias: ["statusreaction"],
+    alias: ["anticall"],
     desc: "Enable or disable anti-call of statuses",
     category: "settings",
     filename: __filename
@@ -157,7 +183,7 @@ async (conn, mek, m, { from, args, isOwner, reply }) => {
 //--------------------------------------------
 cmd({
     pattern: "read-message",
-    alias: ["autoread"],
+    alias: ["autoreadmessage"],
     desc: "enable or disable readmessage.",
     category: "settings",
     filename: __filename
@@ -665,46 +691,6 @@ cmd({
     }
 });
 
-//--------------------------------------------
-//  GINFO COMMANDS
-//--------------------------------------------
-cmd({
-    pattern: "ginfo",
-    desc: "Get group information.",
-    category: "group",
-    filename: __filename,
-}, async (conn, mek, m, { from, quoted, body, args, q, isGroup, sender, reply }) => {
-    try {
-        if (!isGroup) return reply("𝐓𝐡𝐢𝐬 𝐅𝐞𝐚𝐭𝐮𝐫𝐞 𝐈𝐬 𝐎𝐧𝐥𝐲 𝐅𝐨𝐫 𝐆𝐫𝐨𝐮𝐩❗");
-
-        // Get group metadata
-        const groupMetadata = await conn.groupMetadata(from);
-        const groupName = groupMetadata.subject;
-        const groupAdmins = groupMetadata.participants.filter(member => member.admin);
-        const memberCount = groupMetadata.participants.length;
-        const adminList = groupAdmins.map(admin => `│ ∘  @${admin.id.split('@')[0]}`).join("\n") || "│ ∘ No admins";
-
-        // Format the output
-        let textt = `
-╭───「 ᴀʟɪ ᴍᴅ 」───◆  
-│ ∘ ɢʀᴏᴜᴘ: ${groupName}  
-│ ∘ ɢʀᴏᴜᴘ ɪᴅ: ${from}  
-│ ∘ ᴛᴏᴛᴀʟ ᴍᴇᴍʙᴇʀs: ${memberCount}  
-│ ∘ ─────────────────  
-${adminList}
-`;
-
-        // Send the group information
-        await conn.sendMessage(from, {
-            text: textt,
-            mentions: groupAdmins.map(a => a.id),
-        }, { quoted: mek });
-
-    } catch (error) {
-        console.error("Error in ginfo command:", error);
-        reply("An error occurred while retrieving the group information.");
-    }
-});
 
 //--------------------------------------------
 //           BROADCAST COMMANDS
