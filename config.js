@@ -33,9 +33,9 @@ OWNER_NAME: process.env.OWNER_NAME || "𝐅𝖾ᥣ𝗂𝗑",
 // add bot owner name 
 OWNER_REACT: process.env.OWNER_REACT || "false",
 // make this true or false for auto react on all msgs
-WELCOME: process.env.WELCOME || "true",
+WELCOME: process.env.WELCOME || "false",
 // true if want welcome msg in groups
-GOODBYE: process.env.GOODBYE || "true",
+GOODBYE: process.env.GOODBYE || "false",
 // true if want goodbye msg in groups
 ADMIN_STATUS: process.env.ADMIN_STATUS || "false",
 // make true to know who dismiss or promoted a member in group
