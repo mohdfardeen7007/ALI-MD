@@ -338,7 +338,7 @@ cmd({
     alias: ["gc_tagall"],
     desc: "To Tag all Members",
     category: "group",
-    use: '.tagall [message]',
+    use: '.tagal [message]',
     filename: __filename
 },
 async (conn, mek, m, { from, participants, reply, isGroup, senderNumber, groupAdmins, prefix, command, args, body }) => {
