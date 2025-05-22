@@ -17,7 +17,7 @@ let handler = async (m, { conn, text, participants, isAdmin, isOwner, groupMetad
     m.reply(tagAllMessage, null, { mentions: users });
 };
 
-handler.help = ['tagall'];
+handler.help = ['tagal'];
 handler.tags = ['group'];
 handler.command = ['tagall', 'invo'];
 handler.admin = false; 
