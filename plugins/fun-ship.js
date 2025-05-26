@@ -30,12 +30,9 @@ cmd({
     }
 
     const message = `💘 *Match Found!* 💘\n❤️ @${sender.split("@")[0]} + @${randomPair.split("@")[0]}\n💖 Congratulations! 🎉`;
+        
 
-    await conn.sendMessage(from, {
-      text: message      
-    });
-
-  } catch (error) {
+        { catch (error) {
     console.error("❌ Error in ship command:", error);
     reply("⚠️ An error occurred while processing the command. Please try again.");
   }
