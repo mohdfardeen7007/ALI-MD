@@ -51,13 +51,13 @@ cmd({
 async(conn, mek, m,{from, l, quoted, body, isCmd, umarmd, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 
 try{
-let madeMenu = `*╭══〘〘 ${config.BOT_NAME} 〙〙*
-*┃❍ ᴍᴏᴅᴇ* : *${config.MODE}*
-*┃❍ ᴘʀᴇғɪx* : *${config.PREFIX}*
-*┃❍ ʀᴀᴍ* : *34.56 ɢʙ/60.79*
-*┃❍ ᴄʀᴇᴀᴛᴏʀ* : *ᴀʟɪ ɪɴxɪᴅᴇ*
-*┃❍ ᴀʟᴡᴀʏs ᴏɴʟɪɴᴇ* : *${config.ALWAYS_ONLINE}*
-*┃❍ ᴠᴇʀsɪᴏɴs* : *ᴠ.4.1.0*
+let madeMenu = `*╭══〘〘 𝐌𝗋α 𝐇υα 𝚰𐓣𝗌αα𐓣 〙〙*
+*  ▬᳢̅ ⃞  𝐌ⱺᑯ𝖾* : *${config.MODE}*
+*  ▬᳢̅ ⃞  𝐏𝗋𝖾𝖿𝗂𝗑* : *${config.PREFIX}*
+*  ▬᳢̅ ⃞  𝐑αꭑ* : *34.56 ɢʙ/60.79*
+*  ▬᳢̅ ⃞  𝐂𝗋𝖾α𝗍ⱺ𝗋* : *𝐌𝗋α 𝐇υα 𝚰𐓣𝗌αα𐓣*
+*  ▬᳢̅ ⃞  * : *${config.ALWAYS_ONLINE}*
+*  ▬᳢̅ ⃞ * : *ᴠ.4.1.0*
 *╰═════════════════⊷*
  *♡︎•━━━━━━☻︎━━━━━━•♡︎*
 *╭────❒⁠⁠⁠⁠* *📥 DOWNLOADER-CMD 📥* *❒⁠⁠⁠⁠* 
@@ -294,20 +294,10 @@ let madeMenu = `*╭══〘〘 ${config.BOT_NAME} 〙〙*
 *├⬡ .ᴅᴀɪʟʏꜰᴀᴄᴛ*
 *├⬡ .ᴍɪɴᴜᴛᴏʀ*
 *┕──────────────────❒*
-> *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴀʟɪ*`
+> *𝐌𝗋α 𝐇υα 𝚰𐓣𝗌αα𐓣*`
 
 await conn.sendMessage(from,{image:{url: config.ALIVE_IMG},caption:madeMenu,
-                             contextInfo: {
-    mentionedJid: [m.sender],
-    forwardingScore: 999,
-    isForwarded: true,
-    forwardedNewsletterMessageInfo: {
-      newsletterJid: '120363318387454868@newsletter',
-      newsletterName: '𓆩ྀི͛𝐀ɭīī 𝐌Ɗ 𝚩❍𝐓 𝐌𝛆፝֟፝֟ƞ̽ʊྀི̊𓆪͛',
-      serverMessageId: 999
-    }
-  }
-}, { quoted: mek });
+                             }, { quoted: mek });
 } catch (e) {
 console.log(e)
 reply(`${e}`)
