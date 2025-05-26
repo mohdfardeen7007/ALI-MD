@@ -56,7 +56,7 @@ cmd({
         `🔖 *TITLE*: ${title}\n` +
         `📏 *QUALITY*: ${downloads.find(d => d.quality === "HD") ? "HD" : "SD"}\n\n` +
         `> *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴀʟɪ*`,
-        { quoted: mek });
+    }, { quoted: mek });
 
     // Add a reaction to indicate success
     await conn.sendMessage(from, { react: { text: '✅', key: m.key } });
