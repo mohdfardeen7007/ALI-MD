@@ -56,17 +56,7 @@ cmd({
         `🔖 *TITLE*: ${title}\n` +
         `📏 *QUALITY*: ${downloads.find(d => d.quality === "HD") ? "HD" : "SD"}\n\n` +
         `> *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴀʟɪ*`,
-      contextInfo: {
-        mentionedJid: [m.sender],
-        forwardingScore: 999,
-        isForwarded: true,
-        forwardedNewsletterMessageInfo: {
-          newsletterJid: '120363318387454868@newsletter',
-          newsletterName: '『 𝐀ɭīī 𝐌Ɗ 𝐅𝐁 𝐃𝐋 』',
-          serverMessageId: 143
-        }
-      }
-    }, { quoted: mek });
+        { quoted: mek });
 
     // Add a reaction to indicate success
     await conn.sendMessage(from, { react: { text: '✅', key: m.key } });
