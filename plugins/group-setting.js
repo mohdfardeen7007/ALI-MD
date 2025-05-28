@@ -367,7 +367,7 @@ async (conn, mek, m, { from, participants, reply, isGroup, senderNumber, groupAd
         let message = body.slice(body.indexOf(command) + command.length).trim();
         if (!message) message = "𝐀𝗍𝗍𝖾𐓣𝗍𝗂ⱺ𐓣 𝐄𝗏𝖾𝗋𝗒ⱺ𐓣𝖾"; // Default message
 
-        let teks = `*♟️⃞▬᳢ 𝐆𐑩᭷ᥩp :* ${groupName}\n*♟️⃞▬᳢ 𝚳ᥱ᧕𝗯ᥱ𐑩𝐬 : ${totalMembers}*\n*♟️⃞▬᳢ 𝐌𝐞𝐬𝐬𐐼ɠ𝐞 : ${message}*\n\n*︵꯭፝֟⏜۫᷼︵ׅ ꒰ּׄ𝝩ᥲɡƖ𝛊ꨪ𝐬ʈ꒱ׅ ︵۫᷼⏜꯭፝֟︵*\n`;
+        let teks = `*𝐆𐑩᭷ᥩp :* ${groupName}\n*♟️⃞▬᳢ 𝚳ᥱ᧕𝗯ᥱ𐑩𝐬 : ${totalMembers}*\n*♟️⃞▬᳢ 𝐌𝐞𝐬𝐬𐐼ɠ𝐞 : ${message}*\n\n*︵꯭፝֟⏜۫᷼︵ׅ ꒰ּׄ𝝩ᥲɡƖ𝛊ꨪ𝐬ʈ꒱ׅ ︵۫᷼⏜꯭፝֟︵*\n`;
 
         for (let mem of participants) {
             if (!mem.id) continue; // Prevent undefined errors
