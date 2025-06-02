@@ -49,7 +49,7 @@ cmd(
 cmd(
     {
         pattern: 'sticker',
-        alias: ['s', 'stickergif'],
+        alias: ['sticker', 'stickergif'],
         react: "🔮",
         desc: 'Create a sticker from an image, video, or URL.',
         category: 'sticker',
