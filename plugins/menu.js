@@ -297,16 +297,6 @@ let madeMenu = `*╭══〘〘 ${config.BOT_NAME} 〙〙*
 > *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴀʟɪ*`
 
 await conn.sendMessage(from,{image:{url: config.ALIVE_IMG},caption:madeMenu,
-                             contextInfo: {
-    mentionedJid: [m.sender],
-    forwardingScore: 999,
-    isForwarded: true,
-    forwardedNewsletterMessageInfo: {
-      newsletterJid: '120363318387454868@newsletter',
-      newsletterName: '𓆩ྀི͛𝐀ɭīī 𝐌Ɗ 𝚩❍𝐓 𝐌𝛆፝֟፝֟ƞ̽ʊྀི̊𓆪͛',
-      serverMessageId: 999
-    }
-  }
 }, { quoted: mek });
 } catch (e) {
 console.log(e)
