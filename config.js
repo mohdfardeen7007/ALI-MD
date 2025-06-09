@@ -45,7 +45,7 @@ REJECT_MSG: process.env.REJECT_MSG || "*📞 ᴄαℓℓ ɴσт αℓℓσωє�
 // add anticall message 
 DESCRIPTION: process.env.DESCRIPTION || "*© 𝐅𝖾ᥣ𝗂𝗑*",
 // add bot owner name    
-ALIVE_IMG: process.env.ALIVE_IMG || "https://qu.ax/nMDuZ.jpg",
+ALIVE_IMG: process.env.ALIVE_IMG || "https://cdn.ironman.my.id/i/2du3i5.jpg",
 // add img for alive msg
 LIVE_MSG: process.env.LIVE_MSG || "> HEY 👋 IM ALIVE NOW*⚡",
 // add alive msg here 
