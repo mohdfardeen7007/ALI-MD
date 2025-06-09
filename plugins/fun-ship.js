@@ -33,7 +33,6 @@ cmd({
 
     await conn.sendMessage(from, {
       text: message,
-      contextInfo:
     });
 
   } catch (error) {
