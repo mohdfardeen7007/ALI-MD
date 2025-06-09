@@ -32,6 +32,7 @@ cmd({
     const message = `💘 *Match Found!* 💘\n❤️ @${sender.split("@")[0]} + @${randomPair.split("@")[0]}\n💖 Congratulations! 🎉`;
 
     await conn.sendMessage(from, {
+      text: message
     });
 
   } catch (error) {
