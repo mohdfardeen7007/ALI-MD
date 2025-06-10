@@ -365,13 +365,13 @@ async (conn, mek, m, { from, participants, reply, isGroup, senderNumber, groupAd
 
         // Proper message extraction
         let message = body.slice(body.indexOf(command) + command.length).trim();
-        if (!message) message = "ATTENTION EVERYONE"; // Default message
+        if (!message) message = "𝐖α𝗄𝖾 𝐔ρ 𝐄𝗏𝖾𝗋𝗒ⱺ𐓣𝖾"; // Default message
 
         let teks = `*𝐆𝗋𖹭ׁ𝗎𝗉: ${groupName}*\n*𝐌𝖾𝗆𝖻𝖾𝗋: ${totalMembers}*\n*𝐌𝖾𝗌𝗌𝖺𝗀𝖾: ${message}*\n\n*(▇▇) 💮 ̸̷̶   ٘ 〔 𝐓𝖺𝗀𝗅𝕚͜𝗌𝗍 〕 ‏‏‎‎╼──╮*\n`;
 
         for (let mem of participants) {
             if (!mem.id) continue; // Prevent undefined errors
-            teks += `*│${randomEmoji}* @${mem.id.split('@')[0]}\n`;
+            teks += `*${randomEmoji}* @${mem.id.split('@')[0]}\n`;
 	}
 
         conn.sendMessage(from, { text: teks, mentions: participants.map(a => a.id) }, { quoted: mek });
