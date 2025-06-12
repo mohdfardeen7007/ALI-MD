@@ -341,7 +341,7 @@ cmd({
     use: '.tagall [message]',
     filename: __filename
 },
-async (conn, mek, m, { from, participants, reply, isGroup, senderNumber, groupAdmins, prefix, command, args, body }) => {
+async (conn, mek, m, { from, participants, reply, isGroup, sender, senderNumber, groupMetadata, groupAdmins, prefix, command, args, body }) => {
     try {
         if (!isGroup) return reply("*📛 ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴄᴀɴ ᴏɴʟʏ ʙᴇ ᴜsᴇᴅ ɪɴ ɢʀᴏᴜᴘs.*");
         
