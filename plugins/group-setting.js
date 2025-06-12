@@ -348,7 +348,7 @@ async (conn, mek, m, { from, participants, reply, isGroup, sender, senderNumber,
         const botOwner = conn.user.id.split(":")[0]; // Extract bot owner's number
         const senderJid = senderNumber + "@s.whatsapp.net";
 
-        if (!groupMetadata.includes(senderJid) && sender !== botOwner) {
+        if (!groupMetadata.includes(senderJid) && senderNumber!== botOwner) {
             return reply("*📛 σɴℓʏ gʀσᴜᴘ α∂мιɴs σʀ тнє σωɴєʀ ᴄαɴ ᴜsє тнιѕ ᴄσммαɴ∂.*");
         }
 
